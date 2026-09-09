@@ -1,0 +1,32 @@
+:root {
+  --bg: #0d1117; --card: #161b22; --text: #e6edf3;
+  --accent: #2f81f7; --danger: #f85149; --ok: #3fb950; --border: #30363d;
+}
+* { box-sizing: border-box; margin: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: "JetBrains Mono", monospace, sans-serif;
+  min-height: 100vh; padding-bottom: 3rem;
+}
+header { text-align: center; padding: 2rem 1rem; border-bottom: 1px solid var(--border); }
+header h1 { color: var(--accent); }
+header p { color: #8b949e; margin-top: .5rem; font-size: .85rem; }
+main { max-width: 900px; margin: 0 auto; padding: 1.5rem; display: grid; gap: 1.5rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+.card h2 { font-size: 1.05rem; margin-bottom: 1rem; color: var(--accent); }
+button {
+  background: var(--accent); color: #fff; border: 0; border-radius: 6px;
+  padding: .55rem 1.2rem; font-family: inherit; cursor: pointer; font-size: .9rem;
+}
+button:hover { filter: brightness(1.15); }
+button:disabled { opacity: .5; cursor: wait; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: .82rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--border); }
+th { color: #8b949e; text-transform: uppercase; font-size: .7rem; }
+.badge { padding: .15rem .5rem; border-radius: 4px; font-size: .72rem; }
+.badge.ok { background: rgba(63,185,80,.15); color: var(--ok); }
+.badge.danger { background: rgba(248,81,73,.15); color: var(--danger); }
+#wireless-note, #portal-result { font-size: .85rem; color: #8b949e; margin-top: .75rem; white-space: pre-wrap; }
+#status { position: fixed; bottom: 0; left: 0; right: 0; background: var(--card);
+  border-top: 1px solid var(--border); padding: .5rem 1rem; font-size: .78rem; color: #8b949e; }
+@media (max-width: 600px) { /* Termux phone layout */ main { padding: .75rem; } }
